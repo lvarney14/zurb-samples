@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
@@ -58,7 +59,7 @@
       <!-- Basic Modal Content -->
       <!-- [] Change size of modal -->
       <!-- [] Change color & opacity of overlay -->
-      <div id="BasicModal" class="reveal-modal" data-reveal>
+      <div id="BasicModal" class="reveal-modal tiny" data-reveal>
         <p>Basic Modal</p>
         <a class="close-reveal-modal">&#215;</a>
       </div>
@@ -121,10 +122,18 @@
     <script>
       
       // Make Foundation Go
-      $(document).foundation();
+      $(document).foundation({
+  orbit: {
+     
+      bullets: true,
+      animation: 'fade',
+      animation_speed: 500,
+      
+  }
+});
 
       // Activate modal on page load
-      // $('#BasicModal').foundation('reveal', 'open');
+       //$('#BasicModal').foundation('reveal', 'open');
 
       // Customize Orbit
 
